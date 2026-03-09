@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Transportes Madera</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'api/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-truck"></i>
+                <span>Transportes Madera</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="{% url 'home' %}" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'quienes' %}" class="nav-link">Quiénes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'servicios' %}" class="nav-link active">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contacto' %}" class="nav-link">Contacto</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Nuestros Servicios</h1>
+                <p>Soluciones completas para el transporte de madera</p>
+            </div>
+        </section>
+
+        <!-- Botones de API y Admin -->
+        <section class="admin-buttons">
+            <div class="container">
+                <div class="admin-buttons-container">
+                    <a href="/api/" class="btn btn-api" target="_blank">
+                        <i class="fas fa-code"></i>
+                        <span>API REST</span>
+                        <small>Gestionar datos</small>
+                    </a>
+                    <a href="/admin/" class="btn btn-admin" target="_blank">
+                        <i class="fas fa-cog"></i>
+                        <span>Panel Admin</span>
+                        <small>Administrar sistema</small>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-overview">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Transporte Local</h3>
+                        <p>Servicio de transporte dentro de la ciudad y área metropolitana con entregas el mismo día.</p>
+                        <ul class="service-features">
+                            <li>Entregas en 24 horas</li>
+                            <li>Seguimiento en tiempo real</li>
+                            <li>Seguro incluido</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Transporte Nacional</h3>
+                        <p>Conectamos ciudades a nivel nacional con nuestra flota especializada en madera.</p>
+                        <ul class="service-features">
+                            <li>Cobertura nacional</li>
+                            <li>Rutas optimizadas</li>
+                            <li>Monitoreo GPS</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-ship"></i>
+                        </div>
+                        <h3>Transporte Internacional</h3>
+                        <p>Servicios de exportación e importación de productos madereros a nivel internacional.</p>
+                        <ul class="service-features">
+                            <li>Documentación completa</li>
+                            <li>Agentes aduaneros</li>
+                            <li>Almacenamiento temporal</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h3>Almacenamiento</h3>
+                        <p>Servicios de almacenamiento temporal y distribución desde nuestros centros logísticos.</p>
+                        <ul class="service-features">
+                            <li>Almacenes climatizados</li>
+                            <li>Inventario digital</li>
+                            <li>Distribución programada</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>Inspección de Calidad</h3>
+                        <p>Verificación y certificación de la calidad de la madera antes del transporte.</p>
+                        <ul class="service-features">
+                            <li>Inspección previa</li>
+                            <li>Certificados de calidad</li>
+                            <li>Documentación fotográfica</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Soporte 24/7</h3>
+                        <p>Atención al cliente disponible las 24 horas para resolver cualquier consulta o emergencia.</p>
+                        <ul class="service-features">
+                            <li>Línea directa 24/7</li>
+                            <li>Chat en vivo</li>
+                            <li>Soporte técnico</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process">
+            <div class="container">
+                <h2 class="section-title">Nuestro Proceso</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Consulta Inicial</h3>
+                            <p>Recibimos su solicitud y analizamos los requerimientos específicos de su carga.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Cotización</h3>
+                            <p>Preparamos una cotización detallada con precios transparentes y sin costos ocultos.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Programación</h3>
+                            <p>Coordinamos la recolección y programamos la ruta más eficiente para su envío.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Transporte</h3>
+                            <p>Ejecutamos el transporte con monitoreo constante y comunicación regular.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Entrega</h3>
+                            <p>Realizamos la entrega en el destino acordado con confirmación de recepción.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing">
+            <div class="container">
+                <h2 class="section-title">Tarifas Competitivas</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Básico</h3>
+                        <div class="price">$50<span>/km</span></div>
+                        <ul class="pricing-features">
+                            <li>Transporte local</li>
+                            <li>Seguro básico</li>
+                            <li>Seguimiento por SMS</li>
+                            <li>Soporte por email</li>
+                        </ul>
+                        <a href="{% url 'contacto' %}" class="btn btn-outline">Solicitar</a>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="badge">Más Popular</div>
+                        <h3>Profesional</h3>
+                        <div class="price">$75<span>/km</span></div>
+                        <ul class="pricing-features">
+                            <li>Transporte nacional</li>
+                            <li>Seguro completo</li>
+                            <li>Seguimiento GPS</li>
+                            <li>Soporte 24/7</li>
+                            <li>Documentación digital</li>
+                        </ul>
+                        <a href="{% url 'contacto' %}" class="btn btn-primary">Solicitar</a>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Premium</h3>
+                        <div class="price">$100<span>/km</span></div>
+                        <ul class="pricing-features">
+                            <li>Transporte internacional</li>
+                            <li>Seguro premium</li>
+                            <li>Monitoreo en tiempo real</li>
+                            <li>Gerente de cuenta</li>
+                            <li>Almacenamiento incluido</li>
+                            <li>Inspección de calidad</li>
+                        </ul>
+                        <a href="{% url 'contacto' %}" class="btn btn-outline">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Transportes Madera</h3>
+                    <p>Especialistas en transporte de madera con más de 5 años de experiencia en el sector.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Inicio</a></li>
+                        <li><a href="{% url 'quienes' %}">Quiénes Somos</a></li>
+                        <li><a href="{% url 'servicios' %}">Servicios</a></li>
+                        <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +56 9 7604 1056</p>
+                    <p><i class="fas fa-envelope"></i> info@transportesmadera.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Temuco, Chile</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Transportes Madera. Todos los derechos reservados.</p>
+                <p><strong>Maite Riquelme Morales</strong> - Sección AP-173 - Año 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'api/js/script.js' %}"></script>
+</body>
+</html>

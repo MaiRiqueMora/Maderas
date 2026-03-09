@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Transportes Madera</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'api/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-truck"></i>
+                <span>Transportes Madera</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="{% url 'home' %}" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'quienes' %}" class="nav-link">Quiénes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'servicios' %}" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contacto' %}" class="nav-link active">Contacto</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contacto</h1>
+                <p>Estamos aquí para ayudarte con tus necesidades de transporte</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Información de Contacto</h2>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                        <div class="contact-details">
+                            <h3>Teléfono</h3>
+                            <p>+56 9 7604 1056</p>
+                            <p>+56 9 1234 5678</p>
+                        </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>info@transportesmadera.com</p>
+                                <p>ventas@transportesmadera.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        <div class="contact-details">
+                            <h3>Dirección</h3>
+                            <p>Av. Principal 123, Zona Industrial</p>
+                            <p>Temuco, Chile</p>
+                        </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Horarios</h3>
+                                <p>Lunes - Viernes: 8:00 AM - 6:00 PM</p>
+                                <p>Sábados: 9:00 AM - 2:00 PM</p>
+                                <p>Emergencias: 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <h2>Envíanos un Mensaje</h2>
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono">
+                            </div>
+                            <div class="form-group">
+                                <label for="empresa">Empresa</label>
+                                <input type="text" id="empresa" name="empresa">
+                            </div>
+                            <div class="form-group">
+                                <label for="servicio">Tipo de Servicio</label>
+                                <select id="servicio" name="servicio">
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="local">Transporte Local</option>
+                                    <option value="nacional">Transporte Nacional</option>
+                                    <option value="internacional">Transporte Internacional</option>
+                                    <option value="almacenamiento">Almacenamiento</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2 class="section-title">Nuestra Ubicación</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Mapa interactivo de nuestra ubicación</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>¿Cuánto tiempo toma un envío local?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Los envíos locales generalmente se entregan el mismo día o al día siguiente, dependiendo del horario de recolección y la distancia.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>¿Ofrecen seguro para la carga?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, todos nuestros servicios incluyen seguro básico. Para cargas de alto valor, ofrecemos seguros adicionales con cobertura completa.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>¿Pueden transportar diferentes tipos de madera?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutamente. Tenemos experiencia transportando todo tipo de madera: aserrada, en rollo, procesada, y productos terminados.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>¿Cómo puedo hacer seguimiento a mi envío?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Proporcionamos un número de seguimiento único y acceso a nuestra plataforma online donde puedes ver el estado en tiempo real de tu envío.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Transportes Madera</h3>
+                    <p>Especialistas en transporte de madera con más de 5 años de experiencia en el sector.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Inicio</a></li>
+                        <li><a href="{% url 'quienes' %}">Quiénes Somos</a></li>
+                        <li><a href="{% url 'servicios' %}">Servicios</a></li>
+                        <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +56 9 7604 1056</p>
+                    <p><i class="fas fa-envelope"></i> info@transportesmadera.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Temuco, Chile</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Transportes Madera. Todos los derechos reservados.</p>
+                <p><strong>Maite Riquelme Morales</strong> - Sección AP-173 - Año 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'api/js/script.js' %}"></script>
+</body>
+</html>
